@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 const config = {
   content: [
     "./index.html","./src/**/*.{js,jsx,ts,tsx}",
@@ -12,6 +13,11 @@ const config = {
       colors: {
         primary: "#f5f5f5",
         secondary: "#333",
+        accent: "#ff6347",
+        yel: "#FFEA00",
+        org: "#FF6D00",
+        yel1: "#FFD600",
+        yel_light: "#FFFDE7",
       },
       container: {
         center:true,
