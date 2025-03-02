@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="bg-yel_light p-6">
+    <footer className="bg-yel_light p-0 md:p-6">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -49,7 +49,7 @@ function Footer() {
         </div>
 
         {/* Google Map Embed */}
-        <div className="w-full md:w-2/4 p-5">
+        <div className="w-full md:w-2/4 p-3 md:p-5">
           <iframe
             title="IIS City Campus Location"
             src="https://maps.google.com/maps?q=Department%20of%20Computer%20Science,%20University%20of%20Jaffna&t=&z=15&ie=UTF8&iwloc=&output=embed"
