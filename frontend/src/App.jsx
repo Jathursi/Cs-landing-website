@@ -125,7 +125,7 @@ import Teams from './Component/Teams.jsx';
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename='Cs-landing-website'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/circulate" element={<Circulate />}>
