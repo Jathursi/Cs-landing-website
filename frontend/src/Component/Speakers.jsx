@@ -63,7 +63,7 @@ const Speaker = ({ isOpen, onClose, speakers, currentSpeakerIndex, setCurrentSpe
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 relative">
+      <div className="bg-white p-4 rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 relative">
         {/* Close Button */}
         <button className="absolute top-4 right-4 text-gray-500 text-2xl" onClick={onClose}>
           &times;
@@ -71,12 +71,12 @@ const Speaker = ({ isOpen, onClose, speakers, currentSpeakerIndex, setCurrentSpe
 
         <div className="flex justify-between items-center">
           {/* Previous Button */}
-          <button onClick={prevSpeaker} className="text-2xl px-4">&lt;</button>
+          <button onClick={prevSpeaker} className="text-3xl">&lt;</button>
 
           {/* Speaker Details */}
-          <div className="flex w-full gap-5 items-center">
+          <div className="flex flex-col md:flex-row w-full gap-5 items-center">
             {/* Speaker Image */}
-            <div className="w-1/2 flex justify-center">
+            <div className="w-full md:w-1/2 flex justify-center">
               {currentSpeaker.fields.file?.url && (
                 <img
                   src={currentSpeaker.fields.file.url}
@@ -87,14 +87,14 @@ const Speaker = ({ isOpen, onClose, speakers, currentSpeakerIndex, setCurrentSpe
             </div>
 
             {/* Speaker Info */}
-            <div className="w-1/2">
-              <h2 className="text-xl font-bold">{currentSpeaker.fields.title}</h2>
-              <p className="text-gray-600">{currentSpeaker.fields.description}</p>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-xl text-center font-bold">{currentSpeaker.fields.title}</h2>
+              <p className="text-gray-600 text-center">{currentSpeaker.fields.description}</p>
             </div>
           </div>
 
           {/* Next Button */}
-          <button onClick={nextSpeaker} className="text-2xl px-4">&gt;</button>
+          <button onClick={nextSpeaker} className="text-3xl">&gt;</button>
         </div>
       </div>
     </div>

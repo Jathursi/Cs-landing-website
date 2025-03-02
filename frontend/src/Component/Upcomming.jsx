@@ -66,7 +66,7 @@ function Upcomming() {
                   <img
                     src={event.fields.image.fields.file.url}
                     alt={event.fields.event}
-                    className="w-full h-[400px] md:h-[600px] object-cover rounded-lg shadow-lg"
+                    className="w-full h-[400px] md:h-[600px] object-contain rounded-lg "
                   />
                 )}
               </div>
