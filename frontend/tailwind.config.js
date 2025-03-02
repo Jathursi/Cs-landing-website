@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
+ 
 const config = {
   content: [
     "./index.html","./src/**/*.{js,jsx,ts,tsx}",
@@ -18,6 +18,10 @@ const config = {
         org: "#FF6D00",
         yel1: "#FFD600",
         yel_light: "#FFFDE7",
+        b0: '#0D47A1',
+        b2: '#304FFE',
+        insta: '#E91E63',
+        // yel_light: "#FFE57F",
       },
       container: {
         center:true,
