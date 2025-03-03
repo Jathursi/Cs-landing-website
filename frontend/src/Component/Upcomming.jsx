@@ -56,55 +56,39 @@ function Upcomming() {
   };
 
   return (
-    <div className='mb-10'>
+    <div className='mb-10 min-h-[400px] lg:min-h-[600px]'>
       <div className='m-5'>
-        {event.map((event) => (
-          <div key={event.sys.id} className='w-full h-[1000px] md:h-[500px] lg:min-h-[600px]'>
-            <div className="h-[1000px] md:h-[600px] relative w-full flex flex-col md:flex-row">
-              <div className="p-4 w-full md:w-6/12">
-                {event.fields.image?.fields?.file?.url && (
-                  <img
-                    src={event.fields.image.fields.file.url}
-                    alt={event.fields.event}
-                    className="w-full h-[400px] md:h-[600px] object-contain rounded-lg "
-                  />
-                )}
-              </div>
-              <div className='p-4 w-full md:w-6/12'>
-                <div className=" h-[400px] overflow-y-auto">
-                  <p className="text-gray-800" style={{ whiteSpace: 'pre-line' }}>{event.fields.description}</p>
-                </div>
-                <div className='flex flex-col h-[100px] mt-5'>
-  <p className='text-gray-700 flex gap-4'>
-    <strong>Speakers:</strong>
-    {event.fields.speaker && Array.isArray(event.fields.speaker) && event.fields.speaker.length > 0 && (
-      <div className="flex flex-col gap-1">
-        {event.fields.speaker.map((speaker, index) => (
-          <div key={index} className="flex flex-col">
-            {speaker.fields.file?.url && (
-              <div>
-                <p>{speaker.fields.title}</p>
-              </div>
-            )}
-          </div>
-        ))}
+        {event.map((event) => (      
+          <div key={event.sys.id} className='w-full lg:min-h-[600px] flex flex-col md:flex-row'>
+  <div className="p-4 w-full lg:w-1/2 hidden lg:flex justify-center">
+    {event.fields.image?.fields?.file?.url && (
+      <img
+        src={event.fields.image.fields.file.url}
+        alt={event.fields.event}
+        className="w-full md:w-[90%] lg:w-full object-contain md:object-cover rounded-lg"
+      />
+    )}
+  </div>
+  <div className='p-4 w-full lg:w-1/2 flex flex-col justify-center'>
+    <div className="min-h-[300px] lg:h-[400px] overflow-y-auto">
+      <p className="text-gray-800 whitespace-pre-line">{event.fields.description}</p>
+    </div>
+    {event.fields.speaker?.length > 0 && (
+      <div className='mt-4'>
+        <strong className='text-gray-700'>Speakers:</strong>
+        <div className="flex gap-1">
+          {event.fields.speaker.map((speaker, index) => (
+            <p key={index}>{speaker.fields.title}, </p>
+          ))}
+        </div>
+        <div className='text-b2 underline cursor-pointer mt-2' onClick={() => openModal(0)}>
+          Click to see more info
+        </div>
       </div>
     )}
-  </p>
-
-  {/* Hide this if there are no speakers */}
-  {event.fields.speaker?.length > 0 && (
-    <div className='flex items-center gap-4'>
-      <div className='flex text-b2 underline cursor-pointer mt-1' onClick={() => openModal(0)}>
-        Click to see more info
-      </div>
-    </div>
-  )}
+  </div>
 </div>
-
-              </div>
-            </div>
-          </div>
+  
         ))}
       </div>
       <Speaker

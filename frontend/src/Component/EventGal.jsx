@@ -29,13 +29,13 @@ function EventGal() {
   };
 
   return (
-    <div className='mt-10 md:m-10'>
+    <div className='mt-10 lg:m-10'>
         <section className='mb-5 mx-5 md:mb-0'>
         <div className="container ">
             <h1 className='text-2xl text-center text-b3 font-bold pb-10 uppercase'>
             Previous Events
             </h1>
-            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8'>
             {pastEvents.map((event) => (
                 <div
                 key={event.sys.id}
@@ -43,8 +43,8 @@ function EventGal() {
                 onClick={() => handleCardClick(event.sys.id)}
                 >
                 <img src={event.fields.image?.fields.file.url} alt={event.fields.event} className="w-full rounded scale 125" />
-                    <div className='p-4 hidden md:flex '>
-                        <h2 className='text-lg  font-bold text-center'>{event.fields.event}</h2>
+                    <div className='p-1 hidden md:flex '>
+                        <h2 className='text-xl md:text-xl lg:text-lg font-bold text-center'>{event.fields.event}</h2>
                         {/* <p className='text-sm text-center text-neutral-500'>{event.fields.date}</p> */}
                     </div>
                 </div>

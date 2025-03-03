@@ -185,7 +185,7 @@ function Up() {
                 <img
                   src={upcomingEvents[currentIndex]?.fields.image?.fields.file.url}
                   alt={upcomingEvents[currentIndex]?.fields.event}
-                  className="w-full md:w-1/3 object-cover"
+                  className="w-full md:w-1/2 lg:w-1/3 object-cover"
                 />
                 <div className="w-full md:w-2/3 p-4 md:p-6">
                   <h2 className="text-xl md:text-2xl font-bold mb-2">
