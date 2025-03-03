@@ -41,11 +41,11 @@ function Footer() {
         </div> */}
 
         {/* Right Section: Contact & Map */}
-        <div className="text-black flex flex-col w-full justify-center items-center md:w-1/4 gap-2 text-center md:text-left">
+        <div className="text-black flex flex-col w-full justify-center md:justify-start items-center md:items-start md:w-1/4 gap-2 text-center md:text-left">
           <h2 className="font-bold text-lg">Contact Us</h2>
           {/* <p className="flex items-center gap-2"><FaPhone /> 0212 228 060</p> */}
           <p className="flex items-center gap-2"><FaEnvelope />csieeesb@univ.jfn.ac.lk</p>
-          <p className="flex items-center gap-2"><FaMapMarkerAlt />PO Box 57, Thirunelvely, Jaffna. Sri Lanka. </p>
+          <p className="flex items-center gap-2"><FaMapMarkerAlt /><p className=''>PO Box 57, Thirunelvely, Jaffna. Sri Lanka.</p> </p>
         </div>
 
         {/* Google Map Embed */}
